@@ -9,6 +9,9 @@
 import UIKit
 
 var numberOfQuestions: Int = 0
+var fractionsON: Bool = false
+var exponentsON: Bool = false
+var decimalsON: Bool = false
 
 class FirstViewController: UIViewController {
 
@@ -16,6 +19,12 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var numOfQuestionsLabel: UILabel!
     @IBOutlet weak var numOfQuestionsSlider: UISlider!
+    
+    @IBOutlet weak var fractionsSwitch: UISwitch!
+    @IBOutlet weak var exponentsSwitch: UISwitch!
+    @IBOutlet weak var decimalsSwitch: UISwitch!
+    
+    
     
     
     // actions
@@ -25,6 +34,29 @@ class FirstViewController: UIViewController {
         numOfQuestionsLabel.text = "\(numberOfQuestions) questions"
     }
     
+    @IBAction func fractionsSwitchChanged(_ sender: UISwitch) {
+        if (sender.isOn) {
+            fractionsON = true
+        } else {
+            fractionsON = false
+        }
+    }
+    
+    @IBAction func exponentsSwitchChanged(_ sender: UISwitch) {
+        if (sender.isOn) {
+            exponentsON = true
+        } else {
+            exponentsON = false
+        }
+    }
+    
+    @IBAction func decimalsSwitchChanged(_ sender: UISwitch) {
+        if (sender.isOn) {
+            decimalsON = true
+        } else {
+            decimalsON = false
+        }
+    }
     
     
     
@@ -36,6 +68,15 @@ class FirstViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    // segue to SecondViewController (questions)
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let questionView: SecondViewController = segue.destination as! SecondViewController
+        
+        
     }
 
 
