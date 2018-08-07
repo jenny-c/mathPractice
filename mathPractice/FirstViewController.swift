@@ -8,7 +8,7 @@
 
 import UIKit
 
-var numberOfQuestions: Int = 0
+var numberOfQuestions: Int = 50
 var fractionsON: Bool = false
 var exponentsON: Bool = false
 var decimalsON: Bool = false
@@ -74,9 +74,12 @@ class FirstViewController: UIViewController {
     // segue to SecondViewController (questions)
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let questionView: SecondViewController = segue.destination as! SecondViewController
-        
-        
+        let questionView = segue.destination as! SecondViewController
+
+        questionView.numOfQuestions = numberOfQuestions
+        questionView.fractionsON = fractionsON
+        questionView.exponentsON = exponentsON
+        questionView.decimalsON = decimalsON
     }
 
 
