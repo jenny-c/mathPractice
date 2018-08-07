@@ -8,7 +8,7 @@
 
 import UIKit
 
-var numberOfQuestions: Int = 50
+var numberOfQuestions: Int = 30
 var fractionsON: Bool = false
 var exponentsON: Bool = false
 var decimalsON: Bool = false
@@ -17,7 +17,11 @@ class FirstViewController: UIViewController {
 
     // outlets
     
-    @IBOutlet weak var numOfQuestionsLabel: UILabel!
+    @IBOutlet weak var numOfQuestionsLabel: UILabel! {
+        didSet {
+            numOfQuestionsLabel.text = "\(numberOfQuestions) questions"
+        }
+    }
     @IBOutlet weak var numOfQuestionsSlider: UISlider!
     
     @IBOutlet weak var fractionsSwitch: UISwitch!

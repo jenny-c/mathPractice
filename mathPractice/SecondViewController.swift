@@ -13,7 +13,6 @@ class SecondViewController: UIViewController {
     // declare variables
     
     var numOfQuestions: Int = 0
-    var userAnswer: Int = 0
     var correctAnswer: Int = 0
     var correctAnswerCount: Int = 0
     var numOfTries: Int = 0
@@ -45,8 +44,8 @@ class SecondViewController: UIViewController {
     
     
     func generateEquation() -> String {
-        firstNum = Int(arc4random_uniform(1000))+1
-        secondNum = Int(arc4random_uniform(1000))+1
+        firstNum = Int(arc4random_uniform(250))+1
+        secondNum = Int(arc4random_uniform(250))+1
         
         let operatorNumber = Int(arc4random_uniform(2))
         if operatorNumber == 0 {
@@ -68,9 +67,11 @@ class SecondViewController: UIViewController {
     
     @IBAction func submitPressed(_ sender: UIButton) {
         if let userAnswer = Int(answerTextField.text!) {
-            if userAnswer == correctAnswer && numOfTries < 3 {
-                numOfQuestions -= 1
-                questionsLeftLabel.text = String(numOfQuestions)
+            if userAnswer == correctAnswer {
+                if numOfTries < 3 {
+                    numOfQuestions -= 1
+                    questionsLeftLabel.text = String(numOfQuestions)
+                }
                 numOfTries = 0
                 answerTextField.text = ""
                 questionLabel.text = generateEquation()
