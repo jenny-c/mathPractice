@@ -15,6 +15,7 @@ class SecondViewController: UIViewController {
     var numOfQuestions: Int = 0
     var correctAnswer: Int = 0
     var correctAnswerCount: Int = 0
+    var wrongAnswerCount: Int = 0
     var numOfTries: Int = 0
     
     var firstNum: Int = 0
@@ -32,6 +33,11 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var questionsLeftLabel: UILabel! {
         didSet {
             questionsLeftLabel.text = String(numOfQuestions)
+        }
+    }
+    @IBOutlet weak var questionsWrongLabel: UILabel! {
+        didSet {
+            questionsWrongLabel.text = String(wrongAnswerCount)
         }
     }
     @IBOutlet weak var answerTextField: UITextField!
@@ -77,6 +83,10 @@ class SecondViewController: UIViewController {
                 questionLabel.text = generateEquation()
             } else {
                 numOfTries += 1
+                if numOfTries == 1 {
+                    wrongAnswerCount += 1
+                    questionsWrongLabel.text = String(wrongAnswerCount)
+                }
             }
         }
     }

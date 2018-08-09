@@ -160,6 +160,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Questions wrong:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxa-Na-RaM">
+                                <rect key="frame" x="456" y="128" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lT-Qw-2Ww">
+                                <rect key="frame" x="599" y="128" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BgR-s2-Ele"/>
@@ -168,6 +182,7 @@
                         <outlet property="answerTextField" destination="UIo-LP-WIB" id="Aoe-WS-JGb"/>
                         <outlet property="questionLabel" destination="pIT-bg-PB7" id="Qek-Au-GIc"/>
                         <outlet property="questionsLeftLabel" destination="WTM-zH-zHk" id="Kcb-g9-Gnx"/>
+                        <outlet property="questionsWrongLabel" destination="3lT-Qw-2Ww" id="6qZ-g1-Adk"/>
                         <outlet property="submitButton" destination="ouO-2U-Gjy" id="yfi-kV-ejZ"/>
                     </connections>
                 </viewController>
